@@ -41,7 +41,7 @@ export const professionalProjects: ProfessionalProject[] = [
   {
     name: "Enterprise Management / RNR Platform",
     description:
-      "Repair-ticket and enterprise management workflow system covering user management, lab handling, shipment tracking and device status flows for admin and lab users.",
+      "Repair-ticket and enterprise management workflow system covering ticket dashboards, lab-wise breakdowns, cost approvals, batch, lab, user and zone management for admin and lab users.",
     role: "Frontend Engineer",
     technologies: [
       "React",
@@ -52,6 +52,7 @@ export const professionalProjects: ProfessionalProject[] = [
       "TanStack Table",
       "REST APIs",
     ],
+    imagePath: "/projects/rnr.png",
     status: "Professional / Private",
   },
   {
