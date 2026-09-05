@@ -3,6 +3,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import SectionHeading from "./SectionHeading";
 import TechnologyChip from "./TechnologyChip";
 import { professionalProjects } from "@/data/professionalProjects";
+import { withBasePath } from "@/lib/paths";
 
 export default function ProfessionalProjects() {
   return (
@@ -20,13 +21,30 @@ export default function ProfessionalProjects() {
               <Paper
                 variant="outlined"
                 sx={{
-                  p: 3,
                   borderRadius: 2,
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
+                  overflow: "hidden",
                 }}
               >
+                {project.imagePath ? (
+                  <Box
+                    component="img"
+                    src={withBasePath(project.imagePath)}
+                    alt={`${project.name} preview`}
+                    sx={{
+                      width: "100%",
+                      height: 180,
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                      borderBottom: "1px solid",
+                      borderColor: "divider",
+                    }}
+                  />
+                ) : null}
+                <Box sx={{ p: 3, display: "flex", flexDirection: "column", flexGrow: 1 }}>
                 <Stack direction="row" sx={{ justifyContent: "space-between", alignItems: "flex-start", mb: 1.5 }}>
                   <Typography variant="h6">{project.name}</Typography>
                   <Chip
@@ -53,6 +71,7 @@ export default function ProfessionalProjects() {
                     <TechnologyChip key={tech} label={tech} />
                   ))}
                 </Stack>
+                </Box>
               </Paper>
             </Grid>
           ))}

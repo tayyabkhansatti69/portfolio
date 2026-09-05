@@ -4,6 +4,9 @@ export interface ProfessionalProject {
   role: string;
   technologies: string[];
   status: "Professional / Private";
+  // Optional preview screenshot, relative to /public (e.g. "/projects/foo.png").
+  // Only include screenshots you have the right to share publicly.
+  imagePath?: string;
 }
 
 // High-level descriptions only. Source code and confidential details
@@ -48,22 +51,25 @@ export const professionalProjects: ProfessionalProject[] = [
     role: "Frontend Engineer",
     technologies: ["Next.js", "TypeScript", "Material UI", "RTK Query", "REST APIs"],
     status: "Professional / Private",
+    imagePath: "/projects/aajizz.jpg",
   },
   {
     name: "Eternal",
     description:
-      "Membership/booking-style web application with authenticated user flows, account management and a consistent design system across pages.",
+      "Memorial/tribute platform for creating loved-one memory pages, including photo and video memories, a funeral-cost wishlist, and an admin dashboard for creator, user and earnings reporting.",
     role: "Frontend Engineer",
     technologies: ["React", "TypeScript", "Redux Toolkit", "REST APIs"],
     status: "Professional / Private",
+    imagePath: "/projects/eternal.jpg",
   },
   {
     name: "Tutor Hub",
     description:
-      "Online tutoring/course platform frontend covering authentication, student and tutor dashboards, and course management workflows.",
+      "Online language-learning platform with role-based flows for teachers, students and parents, covering course scheduling, availability calendars, earnings and student analytics dashboards.",
     role: "Frontend Engineer",
     technologies: ["React", "TypeScript", "Redux Toolkit", "REST APIs"],
     status: "Professional / Private",
+    imagePath: "/projects/tutorhub.jpg",
   },
   {
     name: "Easyology",
@@ -80,5 +86,15 @@ export const professionalProjects: ProfessionalProject[] = [
     role: "Frontend Engineer",
     technologies: ["React", "TypeScript", "MUI", "TanStack Table", "REST APIs"],
     status: "Professional / Private",
+    imagePath: "/projects/compliancesheet.png",
+  },
+  {
+    name: "Personnel Library",
+    description:
+      "HR management platform covering recruitment, onboarding, employee social feed, tasks, time and payroll modules for company teams.",
+    role: "Frontend Engineer",
+    technologies: ["React", "TypeScript", "Redux Toolkit", "REST APIs"],
+    status: "Professional / Private",
+    imagePath: "/projects/personnel-library.png",
   },
 ];
