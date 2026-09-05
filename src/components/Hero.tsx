@@ -4,6 +4,7 @@ import DescriptionIcon from "@mui/icons-material/DescriptionOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutlineOutlined";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { profile } from "@/data/profile";
+import { withBasePath } from "@/lib/paths";
 
 export default function Hero() {
   return (
@@ -47,7 +48,7 @@ export default function Hero() {
             View Projects
           </Button>
           <Button
-            href={profile.resumeAvailable ? profile.resumePath : "#contact"}
+            href={profile.resumeAvailable ? withBasePath(profile.resumePath) : "#contact"}
             target={profile.resumeAvailable ? "_blank" : undefined}
             rel={profile.resumeAvailable ? "noopener noreferrer" : undefined}
             variant="outlined"

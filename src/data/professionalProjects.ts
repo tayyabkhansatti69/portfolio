@@ -41,4 +41,44 @@ export const professionalProjects: ProfessionalProject[] = [
     ],
     status: "Professional / Private",
   },
+  {
+    name: "Aajizz Donation Platform",
+    description:
+      "Donation platform frontend covering campaign browsing, donor payment flows and transaction history, built with a focus on responsive, API-driven UI.",
+    role: "Frontend Engineer",
+    technologies: ["Next.js", "TypeScript", "Material UI", "RTK Query", "REST APIs"],
+    status: "Professional / Private",
+  },
+  {
+    name: "Eternal",
+    description:
+      "Membership/booking-style web application with authenticated user flows, account management and a consistent design system across pages.",
+    role: "Frontend Engineer",
+    technologies: ["React", "TypeScript", "Redux Toolkit", "REST APIs"],
+    status: "Professional / Private",
+  },
+  {
+    name: "Tutor Hub",
+    description:
+      "Online tutoring/course platform frontend covering authentication, student and tutor dashboards, and course management workflows.",
+    role: "Frontend Engineer",
+    technologies: ["React", "TypeScript", "Redux Toolkit", "REST APIs"],
+    status: "Professional / Private",
+  },
+  {
+    name: "Easyology",
+    description:
+      "E-commerce/sales management web app covering authenticated seller flows, catalog and order-related dashboards.",
+    role: "Frontend Engineer",
+    technologies: ["React", "TypeScript", "Material UI", "REST APIs"],
+    status: "Professional / Private",
+  },
+  {
+    name: "ComplianceSheet",
+    description:
+      "Compliance and inspection management platform covering templates, scheduled inspections, actions and analytics dashboards for audit workflows.",
+    role: "Frontend Engineer",
+    technologies: ["React", "TypeScript", "MUI", "TanStack Table", "REST APIs"],
+    status: "Professional / Private",
+  },
 ];

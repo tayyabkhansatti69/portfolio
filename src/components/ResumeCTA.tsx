@@ -2,6 +2,7 @@ import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/DescriptionOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutlineOutlined";
 import { profile } from "@/data/profile";
+import { withBasePath } from "@/lib/paths";
 
 export default function ResumeCTA() {
   return (
@@ -19,7 +20,7 @@ export default function ResumeCTA() {
             variant="contained"
             size="large"
             startIcon={<DescriptionIcon />}
-            href={profile.resumeAvailable ? profile.resumePath : "#"}
+            href={profile.resumeAvailable ? withBasePath(profile.resumePath) : "#"}
             target="_blank"
             rel="noopener noreferrer"
             disabled={!profile.resumeAvailable}

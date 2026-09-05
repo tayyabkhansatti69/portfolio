@@ -24,6 +24,7 @@ import LightModeIcon from "@mui/icons-material/LightModeOutlined";
 import DescriptionIcon from "@mui/icons-material/DescriptionOutlined";
 import { useColorMode } from "@/theme/ColorModeContext";
 import { profile } from "@/data/profile";
+import { withBasePath } from "@/lib/paths";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -84,7 +85,7 @@ export default function Navbar() {
           ) : null}
           {profile.resumeAvailable ? (
             <Button
-              href={profile.resumePath}
+              href={withBasePath(profile.resumePath)}
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"
@@ -143,7 +144,7 @@ export default function Navbar() {
               </Button>
             ) : null}
             {profile.resumeAvailable ? (
-              <Button fullWidth variant="contained" startIcon={<DescriptionIcon />} href={profile.resumePath} target="_blank" rel="noopener noreferrer">
+              <Button fullWidth variant="contained" startIcon={<DescriptionIcon />} href={withBasePath(profile.resumePath)} target="_blank" rel="noopener noreferrer">
                 Resume
               </Button>
             ) : null}
