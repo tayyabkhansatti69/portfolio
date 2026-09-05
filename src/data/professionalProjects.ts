@@ -13,6 +13,15 @@ export interface ProfessionalProject {
 // for company/client work are intentionally not shown or linked.
 export const professionalProjects: ProfessionalProject[] = [
   {
+    name: "GMS MDM — Mobile Device Management Console",
+    description:
+      "Enterprise MDM console integrating Google's Android Management API for device enrollment, policy and app management, with geofencing, live location tracking and session security with auto-logout on admin-revoked sessions.",
+    role: "Frontend Engineer",
+    technologies: ["React", "Next.js", "TypeScript", "MUI", "Redux Toolkit", "RTK Query", "REST APIs"],
+    status: "Professional / Private",
+    imagePath: "/projects/mdm-portal.jpg",
+  },
+  {
     name: "MDM Management Portal",
     description:
       "Enterprise device management platform focused on managing devices, enrollment workflows, policies, applications and device-related operations.",
