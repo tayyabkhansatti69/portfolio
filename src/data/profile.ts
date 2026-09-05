@@ -33,8 +33,7 @@ export const profile: Profile = {
 
   linkedinUrl: "https://www.linkedin.com/in/tayyab-satti-2b961921a",
 
-  // Place the real PDF at public/resume.pdf and flip this to true.
-  resumeAvailable: false,
+  resumeAvailable: true,
   resumePath: "/resume.pdf",
 };
 
