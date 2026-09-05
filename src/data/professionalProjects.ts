@@ -24,7 +24,7 @@ export const professionalProjects: ProfessionalProject[] = [
   {
     name: "MDM Management Portal",
     description:
-      "Enterprise device management platform focused on managing devices, enrollment workflows, policies, applications and device-related operations.",
+      "Enterprise device management platform covering device enrollment, applications, groups, geo-fencing, OTA updates and device configuration for Android fleets.",
     role: "Frontend Engineer",
     technologies: [
       "React",
@@ -35,6 +35,7 @@ export const professionalProjects: ProfessionalProject[] = [
       "RTK Query",
       "REST APIs",
     ],
+    imagePath: "/projects/mdm-dashboard.jpg",
     status: "Professional / Private",
   },
   {
