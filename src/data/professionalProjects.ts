@@ -78,6 +78,7 @@ export const professionalProjects: ProfessionalProject[] = [
     role: "Frontend Engineer",
     technologies: ["React", "TypeScript", "Material UI", "REST APIs"],
     status: "Professional / Private",
+    imagePath: "/projects/easyology.jpg",
   },
   {
     name: "ComplianceSheet",
