@@ -8,6 +8,9 @@ export interface PublicProject {
   // hide the corresponding button instead of linking to a fake URL.
   githubUrl: string;
   liveUrl: string;
+  // Optional preview screenshot, relative to /public (e.g. "/projects/foo.png").
+  // Leave empty until a real image has been added — no placeholder is rendered.
+  imagePath?: string;
 }
 
 // Personal / public projects recruiters can actually inspect.
@@ -29,5 +32,21 @@ export const projects: PublicProject[] = [
     status: "In Progress",
     githubUrl: "",
     liveUrl: "",
+  },
+  {
+    name: "Local GPT — ChatGPT Style Assistant",
+    description:
+      "A personal ChatGPT-style chat assistant with a clean browser UI, chat history and configurable AI backends.",
+    technologies: ["Next.js", "TypeScript"],
+    features: [
+      "Chat-style conversation UI",
+      "Multiple/local model support",
+      "Chat history sidebar",
+      "File and image upload UI",
+      "Responsive layout",
+    ],
+    status: "In Progress",
+    githubUrl: "",
+    liveUrl: "https://free-chat-gpt-6q7l.vercel.app/",
   },
 ];

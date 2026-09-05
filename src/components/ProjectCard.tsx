@@ -3,19 +3,38 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import TechnologyChip from "./TechnologyChip";
 import type { PublicProject } from "@/data/projects";
+import { withBasePath } from "@/lib/paths";
 
 export default function ProjectCard({ project }: { project: PublicProject }) {
   return (
     <Paper
       variant="outlined"
       sx={{
-        p: 3,
         borderRadius: 2,
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        overflow: "hidden",
       }}
     >
+      {project.imagePath ? (
+        <Box
+          component="img"
+          src={withBasePath(project.imagePath)}
+          alt={`${project.name} preview`}
+          sx={{
+            width: "100%",
+            height: 180,
+            objectFit: "cover",
+            objectPosition: "top",
+            display: "block",
+            borderBottom: "1px solid",
+            borderColor: "divider",
+          }}
+        />
+      ) : null}
+
+      <Box sx={{ p: 3, display: "flex", flexDirection: "column", flexGrow: 1 }}>
       <Stack direction="row" sx={{ justifyContent: "space-between", alignItems: "flex-start", mb: 1.5 }}>
         <Typography variant="h6">{project.name}</Typography>
         <Chip label={project.status} size="small" sx={{ bgcolor: "action.hover", fontSize: "0.72rem" }} />
@@ -68,6 +87,7 @@ export default function ProjectCard({ project }: { project: PublicProject }) {
           {project.liveUrl ? "View Live Demo" : "Demo coming soon"}
         </Button>
       </Stack>
+      </Box>
     </Paper>
   );
 }
