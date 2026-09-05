@@ -31,9 +31,7 @@ export const profile: Profile = {
   // Confirmed via authenticated GitHub CLI session.
   githubUrl: "https://github.com/tayyabkhansatti69",
 
-  // Not yet provided — leave empty until a real profile URL is added.
-  // The LinkedIn button will stay hidden/disabled until this is set.
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/tayyab-satti-2b961921a",
 
   // Place the real PDF at public/resume.pdf and flip this to true.
   resumeAvailable: false,
